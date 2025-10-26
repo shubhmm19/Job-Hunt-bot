@@ -10,11 +10,30 @@ The goal of this project is to streamline the job search process, saving time an
 
 ## Features
 
-- **Job Search Automation**: Automatically searches for jobs on LinkedIn based on keywords, location, and other filters.
-- **Custom Filtering**: Filters job postings by criteria such as job title, company, experience level, or posting date.
-- **Action Triggers**: Performs actions like saving jobs, sending email/Slack notifications, or preparing application templates.
-- **Customizable Workflows**: Built with n8n, allowing easy modification of workflows to suit specific needs.
-- **Scalable and Extensible**: Add new features or integrate with other platforms (e.g., email, spreadsheets) using n8n's modular nodes.
+### Job Search Automation
+![Job Search Workflow](Screenshots/Workflow.png)
+Automatically searches for jobs on LinkedIn based on keywords, location, and other filters.
+
+### Custom Filtering
+Filters job postings by criteria such as job title, company, experience level, or posting date.
+
+### Action Triggers
+Performs actions like saving jobs, sending email/Slack notifications, or preparing application templates.
+
+### Google Sheets Integration
+![Google Sheets Integration](Screenshots/UpdatedSheet.png)
+The extracted job data is sent to a Google Sheets node, which appends or updates a spreadsheet with the job details.
+
+### Telegram Notifications
+![Telegram Notification 1](Screenshots/Message1.png)
+![Telegram Notification 2](Screenshots/Message2.png)
+The Telegram node sends notifications to a user-specified chat or channel with job details and links.
+
+### Customizable Workflows
+Built with n8n, allowing easy modification of workflows to suit specific needs.
+
+### Scalable and Extensible
+Add new features or integrate with other platforms (e.g., email, spreadsheets) using n8n's modular nodes.
 
 ## How It Works
 
@@ -37,7 +56,7 @@ The bot operates through a series of n8n workflows that connect LinkedIn, Google
    - The Telegram node sends notifications to a user-specified chat or channel.
    - Notifications include job details, links to the Google Sheet, and links to files stored in Google Drive.
    - Example message: “New job found: Software Engineer at XYZ Corp. Details: [Google Sheet Link]. PDF: [Google Drive Link].”
-   - Notification is send with the help of Telegram bot by getting chatid and then making a new bot.
+   - Notification is send with the help of Telegram bot by getting chatid and then making a new bot.P
 
 5. **Scheduling and Triggers**:
    - The workflow is triggered manually or scheduled (e.g., daily at 9 AM) using n8n’s Schedule node.
